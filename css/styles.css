@@ -5,7 +5,8 @@
   --light-color: #f4f4fd;
   --primary-brand-color: #4d5ae5;
   --pressed-state-color: #404bbf;
-  --Accent-color: #e7e9fc;
+  --accent-color: #e7e9fc;
+  --subtle-Text: #8e8f99;
 }
 *,
 *::before,
@@ -57,9 +58,11 @@ body {
 
 /* ------------Header----------- */
 .header {
-  border-bottom: 1px solid #e7e9fc;
+  border-bottom: 1px solid var(--Accent-color);
   padding-top: 24px;
   padding-bottom: 24px;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .page-header-container {
   display: flex;
@@ -140,6 +143,20 @@ body {
   align-items: center;
   padding: 188px 0;
 }
+.background-hero {
+  max-width: 1440px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office\ 1.jpg);
+}
 .hero-wrap {
   display: inline-block;
   margin: 0 auto;
@@ -196,6 +213,17 @@ body {
 .skills-item {
   width: calc((100% - 72px) / 4);
 }
+.skills-wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-color);
+  height: 112px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.skills-icon {
+}
 .skills-item-list {
   display: flex;
   gap: 24px;
@@ -209,7 +237,7 @@ body {
   margin-bottom: 8px;
 }
 
-s .skills-text {
+.skills-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -263,9 +291,39 @@ s .skills-text {
 .employees-item-list {
   background: var(--white-color);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.icon-soc-wrap {
+  padding: 8px 16px 32px 16px;
+}
+.icon-soc-item {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.icon-soc-list {
+  width: 40px;
+  height: 40px;
+}
+.icon-soc-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-brand-color);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.icon-soc-link:hover,
+.icon-soc-link:focus {
+  background-color: var(--pressed-state-color);
+}
+.icon-soc {
+  fill: #f4f4fd;
 }
 .card-text {
-  padding: 32px 16px;
+  padding: 32px 16px 0 16px;
 }
 .img-employees {
   width: 100%;
@@ -287,14 +345,65 @@ s .skills-text {
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
+/* ---------------Customers------------------ */
+.customers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 
+.customers-titel {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--dark-color);
+  margin-bottom: 72px;
+}
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+
+.customers-item {
+  width: calc((100% - 120px) / 6);
+  height: 88px;
+}
+.customer-icon {
+}
+.customer-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--subtle-Text);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--subtle-Text);
+}
+.customer-link:hover,
+.customer-link:focus {
+  border-color: var(--pressed-state-color);
+}
+.customer-link:hover,
+.customer-link:focus .customer-icon {
+  fill: var(--pressed-state-color);
+}
 /* -------Footer------ */
 .footer {
   background: var(--dark-color);
   min-height: 312px;
   padding: 100px 0;
 }
-
+.footer-wrap {
+  display: flex;
+  align-items: baseline;
+}
+.foter-content-wrap {
+  margin-right: 120px;
+  gap: 120px;
+}
 .logo-footer {
   color: var(--primary-brand-color);
   text-decoration: none;
@@ -308,7 +417,37 @@ s .skills-text {
   margin-bottom: 16px;
   display: inline-block;
 }
+.footer-soc-wrap {
+}
+.text-soc-footer {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--white-color);
+  margin-bottom: 16px;
+}
+.icon-soc-item-footer {
+  display: flex;
+  gap: 16px;
+}
 
+.icon-soc-list-footer {
+  width: 40px;
+  height: 40px;
+}
+.icon-soc-link-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-brand-color);
+  border-radius: 50%;
+}
+.icon-soc-footer {
+  fill: #f4f4fd;
+}
 .span-footer {
   font-family: 'Raleway';
   font-style: normal;
@@ -360,12 +499,14 @@ s .skills-text {
   color: var(--white-color);
   background-color: var(--pressed-state-color);
   border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button-item {
   display: flex;
   gap: 24px;
   justify-content: center;
-  margin-bottom: 72px;
+  margin-bottom: 70px;
 }
 /* ------products------ */
 
@@ -380,6 +521,11 @@ s .skills-text {
 }
 .portfolio-list-link {
   display: block;
+}
+.portfolio-list-link:hover,
+.portfolio-list-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .secondary-titel {
   font-weight: 500;
