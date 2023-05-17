@@ -7,6 +7,7 @@
   --pressed-state-color: #404bbf;
   --accent-color: #e7e9fc;
   --subtle-Text: #8e8f99;
+  --success-color: #31d0aa;
 }
 *,
 *::before,
@@ -155,7 +156,7 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office\ 1.jpg);
+    url(../images/people-office.jpg);
 }
 .hero-wrap {
   display: inline-block;
@@ -273,6 +274,10 @@ body {
   background: var(--light-color);
   padding: 120px 0;
 }
+.employees-wrap {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
 .employees-titel {
   font-weight: 700;
   font-size: 36px;
@@ -354,7 +359,7 @@ body {
 .customers-titel {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 1.1;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
@@ -371,6 +376,7 @@ body {
   height: 88px;
 }
 .customer-icon {
+  fill: currentColor;
 }
 .customer-link {
   width: 100%;
@@ -385,11 +391,12 @@ body {
 .customer-link:hover,
 .customer-link:focus {
   border-color: var(--pressed-state-color);
+  color: #404bbf;
 }
-.customer-link:hover,
+/* .customer-link:hover,
 .customer-link:focus .customer-icon {
   fill: var(--pressed-state-color);
-}
+} */
 /* -------Footer------ */
 .footer {
   background: var(--dark-color);
@@ -436,6 +443,7 @@ body {
   width: 40px;
   height: 40px;
 }
+
 .icon-soc-link-footer {
   display: flex;
   align-items: center;
@@ -444,6 +452,11 @@ body {
   height: 100%;
   background-color: var(--primary-brand-color);
   border-radius: 50%;
+}
+
+.icon-soc-link-footer:hover,
+.icon-soc-link-footer:focus {
+  background-color: #31d0aa;
 }
 .icon-soc-footer {
   fill: #f4f4fd;
