@@ -344,6 +344,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  margin-bottom: 8px;
 }
 /* ---------------Customers------------------ */
 .customers {
